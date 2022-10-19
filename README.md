@@ -16,3 +16,27 @@ There are 4 [data tables](https://github.com/Shailesh-python/Case-Study-7-Balanc
 3. `Product Hierarcy`
 
 4. `Product Price`
+
+```python
+import pandas as pd
+import numpy as np
+import pyodbc as py
+import numpy as np
+
+import warnings
+warnings.filterwarnings('ignore')
+```
+
+```python
+conn = py.connect(
+    "DRIVER={SQL Server};SERVER=SHAILESH-PC\SQLEXPRESS;DATABASE=DannyMa;"
+)
+
+df_sales = pd.read_sql_query('select * from balanced_tree.sales',conn)
+df_pp = pd.read_sql_query('select * from balanced_tree.product_prices',conn)
+df_ph = pd.read_sql_query('select * from balanced_tree.product_hierarchy',conn)
+df_pd = pd.read_sql_query('select * from balanced_tree.product_details',conn)
+
+conn.close()
+```
+[Check my solution](https://github.com/Shailesh-python/Case-Study-7-Pandas/blob/main/Case%20Study%201%20Solutions.ipynb)
