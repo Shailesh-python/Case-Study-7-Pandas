@@ -39,4 +39,4 @@ df_pd = pd.read_sql_query('select * from balanced_tree.product_details',conn)
 
 conn.close()
 ```
-[Check my solution](https://github.com/Shailesh-python/Case-Study-7-Pandas/blob/main/Case%20Study%201%20Solutions.ipynb)
+[Check my solution](https://github.com/Shailesh-python/Case-Study-7-Pandas/blob/main/Case%20Study%207%20Solutions.ipynb)
